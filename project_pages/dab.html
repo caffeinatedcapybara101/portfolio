@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Angela Xing</title>
+    <link rel="shortcut icon" type="images/png" href="../images/browser_icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <link rel="stylesheet" href="../stylesheets/navbar_style.css">
+    <link rel="stylesheet" href="../stylesheets/proj_page_style.css">
+    <link rel="stylesheet" href="../stylesheets/dab_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <h2>
+            <a href="../index.html">ANGELA XING</a>
+        </h2>
+        <!-- navbar links -->
+        <nav>
+            <ul class="navbar-link">
+                <li>
+                    <a class="nav-individual-link" href="../index.html">ABOUT</a>
+                </li>
+                <li>
+                    <a class="nav-individual-link" href="../projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a class="nav-individual-link" href="../gymnastics.html">GYMNASTICS</a>
+                </li>
+                <li>
+                    <a class="nav-individual-link" href="../resume.html">RESUME</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- body -->
+    <div class="container">
+
+        <!-- Summary Section -->
+        <div id="header-bracket">
+            <h1> D@B </h1>
+            <h2> April 2022 </h2>
+            <h2> Java/React </h2>
+        </div>
+
+        <div class="content">
+            <p>
+                D@B (Dorms at Brown) was developed as a final project for Introduction to Software
+                Engineering.
+            </p>
+            <p>
+                In previous years, there has been a lack of information regarding housing around campus, making it
+                difficult to choose dorms and form groups during the housing process. Students
+                in the past created
+                <a href="https://brownbeardens.com/">Brown Bear Dens</a>
+                in order to provide some information about the dorms including a list of rooms and floor
+                plans for each dorm. While this site has been helpful, it lacks key information such as images,
+                characteristics of dorms, opinions of students, etc.
+            </p>
+            <p>
+                To address this, my group and I created D@B. This site incorporates the previously mentioned
+                information and more into the following features:
+            <ul>
+                <li>
+                    User authentication/login in order to verify that users are Brown University students
+                </li>
+                <li>
+                    A user profile that contains user information and reviews written
+                </li>
+                <li>
+                    Filtering based on specific attributes of dorms
+                </li>
+                <li>
+                    A dorm profile that contains information about each dorm and ability to view and write
+                    reviews for each dorm
+                </li>
+                <li>
+                    A survey that recommends dorms based on the user's preferences
+                </li>
+            </ul>
+            </p>
+        </div>
+
+        <!-- Implementation Details Section -->
+        <div class="bracket">
+            <h2>
+                IMPLEMENTATION DETAILS
+            </h2>
+        </div>
+
+        <div class="content">
+            <p>
+                During the project, I focused on implementing the dorm filtering. This process required
+                collecting filter information from users to send a post request to the backend, gather data
+                from the database to filter, and update the page based on the filtered data.
+            </p>
+
+            <h3> Collecting User Input to Make POST Requests </h3>
+            <p>
+                The first step in the filtering process involved collecting user information, specifically,
+                the filter categories and the filter types. On the right side of the dorms page, I created a
+                sidebar for the users to select different filters based on the categories (room type, location,
+                bathroom, kitchen, year, and other). Additionally, I designed the UI to allow users to select
+                filters from multiple categories and filters from the same category. For example, if a housing group
+                was looking for either 2 doubles or a suite on south campus, they would be able to filter by doubles
+                and suites on south campus.
+            </p>
+            <div class="figures">
+                <div class="single-figure">
+                    <img src="../images/dab_page/filters1.png" alt="filters grid">
+                    <p class="caption">Room Filters</p>
+                </div>
+                <div class="single-figure">
+                    <img src="../images/dab_page/filters2.png" alt="filters grid">
+                    <p class="caption">Bathroom and Kitchen Filters</p>
+                </div>
+                <div class="single-figure">
+                    <img src="../images/dab_page/filters3.png" alt="filters grid">
+                    <p class="caption">Location and Year Filters</p>
+                </div>
+                <div class="single-figure">
+                    <img src="../images/dab_page/filters4.png" alt="filters grid">
+                    <p class="caption">Other Filters</p>
+                </div>
+            </div>
+            <p>
+                When a user clicks on one of the filters, a POST request is made using the filter route in
+                the backend. This request is sent with a list of the filter categories and a list of the
+                corresponding selected filters as the parameters.
+            </p>
+
+            <h3> Gathering Data and Filtering </h3>
+            <p>
+                Once the POST request is made, the backend handles filtering the dorms. Each dorm and its
+                attributes (dorm name, room types, loaction, etc.) are stored in a Firebase Realtime Database.
+                In the backend, I store all dorm data in a list of Dorm objects where I represent each
+                attribute of the dorm as a field within the object. In addition, I store a list of current
+                filtered dorms in order to apply multiple filters.
+            </p>
+            <p>
+                In terms of actual filtering, I first iterate through each filter in the list sent through the
+                POST request parameters. Each filter category has its own filter function. These functions then
+                iterate through a list of current filtered dorms to determine whether the current dorm has
+                the inputted attribute. Once all filters have been applied, a list of the
+                filtered dorm names is sent back to the frontend.
+            </p>
+
+            <h3> Updating the Frontend </h3>
+            <p>
+                Once the frontend has a list of filtered dorm names, the page gets update with the corresponding
+                dorm profiles. Each dorm profile has an ID that is the dorm's name. In turn, I only display the
+                dorm profiles with IDs corresponding to the list of filtered dorm names by setting the display to
+                'flex' or 'none'.
+            </p>
+            <div class="figures">
+                <div class="single-figure">
+                    <img id="filter-gif" src="../images/dab_page/filter.gif" alt="filter gif">
+                </div>
+            </div>
+        </div>
+
+        <!-- Testing Section -->
+        <div class="bracket">
+            <h2>
+                TESTING
+            </h2>
+        </div>
+
+        <div class="content">
+            <p>
+                Testing was split into two categories: frontend and backend. The frontend testing was
+                comprised of user testing/feedback, and the backend testing was comprised of unit tests for
+                each function used for filtering.
+            </p>
+
+            <h3> Frontend Testing </h3>
+            <p>
+                For frontend and user testing, my group and I asked our friends to explore our site and
+                tell us any bugs they notice or any features they would like to see. Below are the notable
+                changes made from user testing:
+            <ul>
+                <li>
+                    Multiple Filters From the Same Category
+                    <ul>
+                        <li>
+                            Original Version: I originally designed the filter sidebar so that users could
+                            only select one filter from each category at a time.
+                        </li>
+                        <li>
+                            Suggestion: It could be the case that users are looking for dorms that have multiple
+                            filters attributes from the same categroy (eg. doubles and suites).
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Category for Year
+                    <ul>
+                        <li>
+                            Original Version: I did not have a category for year in the original design.
+                        </li>
+                        <li>
+                            Suggestion: Freshman and upperclassmen housing are different. Additionally,
+                            the housing lottery only applies to upperclassmen housing, so adding a filter
+                            based on this will help students find available dorms during the housing process.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Deselecting All Filters
+                    <ul>
+                        <li>
+                            Original Version: In the original version, after selecting some filters and then
+                            deselecting them, none of the dorm profiles appear.
+                        </li>
+                        <li>
+                            Suggestion: Rather than having a blank page show, the original page with all the
+                            dorm profiles should appear when all filters are deselected.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </p>
+
+            <h3> Backend Testing </h3>
+            <p>
+                The backend testing involved unit tests to ensure that the filtering process worked as
+                expected. In order to test the filter functions corresponding to each category, I created a
+                list of 5 Dorm objects with particular attributes to checked whether the expected output of a
+                certain filter matched the actual output. I also created unit tests to determine whether
+                applying multiple filters functions as expected by matching the expected output to the actual
+                output. I also tested edge cases, such as filtering a list with a single Dorm object and filtering
+                an empty list which helped my find some bugs with the original code.
+            </p>
+        </div>
+
+    </div>
+
+</body>

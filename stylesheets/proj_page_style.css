@@ -1,0 +1,116 @@
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0px;
+    background-color: #4C5364;
+}
+
+/************************* body *************************/
+
+.container {
+    color: white;
+    width: 90%;
+    border-top: 110px solid #4C5364;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+#header-bracket {
+    height: 141px;
+}
+
+#header-bracket:before {
+    content: " ";
+    width: 10px;
+    height: 135px;
+    position: absolute;
+}
+
+h1 {
+    letter-spacing: 5px;
+    font-size: 60px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+
+#header-bracket h2 {
+    font-size: 20px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+
+.bracket {
+    width: max-content;
+    padding: 10px;
+}
+
+.bracket h2 {
+    margin: 0px;
+}
+
+.content {
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+li {
+    list-style-type: circle;
+}
+
+.content h3 {
+    width: max-content;
+}
+
+/************************* links *************************/
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+}
+
+p a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 4px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+p a:hover:before {
+    bottom: 0;
+    height: 100%;
+}
+
+/************************* figures *************************/
+.row-figure {
+    margin-top: 30px;
+}
+
+.figures {
+    display: flex;
+}
+
+.single-figure {
+    text-align: center;
+}
+
+.single-figure img {
+    width: 90%;
+}
+
+.caption {
+    text-align: center;
+    width: max-content;
+    margin: 0px auto 15px auto;
+}

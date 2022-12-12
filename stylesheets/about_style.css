@@ -1,0 +1,158 @@
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0px;
+    background-color: #4C5364;
+}
+
+/************************* body *************************/
+.container {
+    color: white;
+    width: 100%;
+    border-top: 110px solid #4C5364;
+    position: relative;
+}
+
+/* Profile Picture */
+#profile-pic {
+    width: 35vw;
+    object-fit: cover;
+    margin: 20px;
+    /*comment this out*/
+}
+
+/* About Section */
+#about {
+    background-color: #738290;
+    padding: 10px 20px 10px 20px;
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    top: 6vw;
+    left: 50vw;
+    z-index: 0.5;
+}
+
+#intro {
+    font-size: 5vw;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+#name {
+    font-size: 2vw;
+    margin-top: 0px;
+}
+
+#about p {
+    text-align: left;
+    font-size: 1.4vw;
+}
+
+p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+}
+
+p a:before {
+    content: '';
+    position: absolute;
+    background-color: #89BAB758;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 4px;
+    z-index: 0.5;
+    transition: all .3s ease-in-out;
+}
+
+p a:hover:before {
+    bottom: 0;
+    height: 100%;
+}
+
+/* Socials */
+.rightpane {
+    position: absolute;
+    width: 5vw;
+    height: 100vh;
+    top: 6vw;
+    left: 94vw;
+    float: left;
+}
+
+#socials {
+    width: 100%;
+    text-align: center;
+    margin-top: 100%;
+}
+
+.socials-link {
+    width: 1.2em;
+    display: block;
+    text-align: center;
+    font-size: 2.5vw;
+    margin-bottom: 30px;
+    margin-left: 0.35em;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: color 0.75s ease-in-out, box-shadow 0.75s ease-in-out;
+}
+
+.socials-link:hover {
+    box-shadow: inset 200px 0 0 0 white;
+    color: #4C5364;
+}
+
+/************************* changing sizes *************************/
+@media (max-width:910px) {
+    #profile-pic {
+        width: 100vw;
+    }
+
+    #about {
+        width: 95.5vw;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #intro {
+        font-size: 48pt;
+    }
+
+    #name {
+        font-size: 24pt;
+    }
+
+    #about p {
+        font-size: 15pt;
+    }
+
+    .rightpane {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+    }
+
+    #socials {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .socials-link {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        font-size: 35px;
+    }
+
+}
