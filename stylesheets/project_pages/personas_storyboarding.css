@@ -1,0 +1,72 @@
+#header-bracket:before {
+    border: 0px solid #ff9797;
+    border-top: 3px solid #ff9797;
+    border-left: 3px solid #ff9797;
+    border-bottom: 3px solid #ff9797;
+}
+
+.bracket {
+    border: 3px solid #ff9797;
+}
+
+.content h3 {
+    border-bottom: 3px solid #ff9797;
+}
+
+.single-figure {
+    border: 2px solid #ff9797;
+    display: inline;
+    margin: 5px;
+    padding: 7px;
+    width: 375px;
+    height: 760px;
+}
+
+.single-figure img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.single-figure p {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* table for user observation */
+.user-obs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.user-obs table {
+    width: 575px;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid #ff9797;
+}
+
+.table-head {
+    text-align: center;
+    border-bottom: 2px solid #ff9797;
+    height: 25px;
+}
+
+/* persona images */
+.persona-img {
+    width: 500px;
+}
+
+/* storyboard images */
+.storyboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.storyboard img {
+    width: 350px;
+    margin: 7px;
+}

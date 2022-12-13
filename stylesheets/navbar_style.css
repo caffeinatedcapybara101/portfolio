@@ -54,10 +54,3 @@ a {
     box-shadow: inset 200px 0 0 0 #4C5364;
     color: white;
 }
-
-/************************* changing sizes *************************/
-@media (max-width:670px) {
-    header {
-        height: 140px;
-    }
-}

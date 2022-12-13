@@ -1,0 +1,45 @@
+#header-bracket:before {
+    border: 0px solid #879A5B;
+    border-top: 3px solid #879A5B;
+    border-left: 3px solid #879A5B;
+    border-bottom: 3px solid #879A5B;
+}
+
+.bracket {
+    border: 3px solid #879A5B;
+}
+
+.content h3 {
+    border-bottom: 3px solid #879A5B;
+}
+
+.content h4 {
+    background-color: #879A5B58;
+    padding: 3px;
+    width: max-content;
+}
+
+#sketches-slides .slides,
+#sketches-slides .arrows {
+    width: 40%;
+}
+
+#low-fidelity-slides .slides,
+#low-fidelity-slides .arrows,
+#high-fidelity-slides .slides,
+#high-fidelity-slides .arrows,
+#updated-high-fidelity-slides .slides,
+#updated-high-fidelity-slides .arrows,
+#user-testing-slides .slides,
+#user-testing-slides .arrows {
+    width: 20%;
+}
+
+.dot {
+    background-color: #879A5B58;
+}
+
+.active,
+.dot:hover {
+    background-color: #879A5B;
+}
