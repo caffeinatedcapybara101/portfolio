@@ -20,7 +20,7 @@
     <!-- header -->
     <header>
         <h2>
-            <a href="index.html">CAFFEINATED CAPYBARA</a>
+            <a href="../index.html">CAFFEINATED CAPYBARA</a>
         </h2>
         <!-- navbar links -->
         <nav>
@@ -35,29 +35,34 @@
         </nav>
     </header>
 
-    <!-- header -->
-    <!-- <header> -->
-    <!-- navbar links -->
-    <!-- <nav>
-            <ul class="navbar-link">
-                <li>
-                    <a class="nav-individual-link" href="#usability-problems">USABILITY PROBLEMS</a>
-                </li>
-                <li>
-                    <a class="nav-individual-link" href="#visual-redesign">VISUAL REDESIGN</a>
-                </li>
-                <li>
-                    <a class="nav-individual-link" href="#responsive-redesign">RESPONSIVE REDESIGN</a>
-                </li>
-            </ul>
-        </nav>
-    </header> -->
-
     <div class="container">
         <!------------ Heading ------------>
         <div id="header-bracket">
             <h1> Responsive Redesign </h1>
             <h2> October 18, 2022 </h2>
+        </div>
+
+        <!------------ Summary ------------>
+        <div class="bracket" id="usability-problems">
+            <h2>
+                SUMMARY
+            </h2>
+        </div>
+        <div class="content">
+            <p>
+                Responsive Redesign is a project practicing the workflow of redesigning a simple website, from
+                identifying flaws in an existing interface to creating low and high fidelity prototypes to building
+                the site itself. The first part of this project,
+                <a href="#usability-problems">Identifying Usability Problems</a>,
+                involved analyzing the usability and accessibility of the.
+                The second part of this project,
+                <a href="#visual-redesign">Visual Redesign</a>,
+                involved creating low-fidelity wireframes, a visual design style guide, and high-fidelity prototypes in
+                order to address any issues identified in the first section.
+                The final part of this project,
+                <a href="#responsive-redesign">Responsive Redesign</a>,
+                involved using the final high-fidelity prototypes to create the page using HTML and CSS.
+            </p>
         </div>
 
         <!------------ Part 1: Identifying Usability Problems ------------>
@@ -70,7 +75,7 @@
             <!-- Accessible Interface -->
             <h3> Picking a Web Page </h3>
             <p>
-                I chose the site for <a href="https://www.smallpointcafe.com/">Small Point Cafe.</a>
+                I chose the site for <a href="https://www.smallpointcafe.com/" target="_blank">Small Point Cafe.</a>
                 A while ago, my friends and I were looking for coffee shops in the area to explore, and we
                 found Small Point Cafe. We thought it looked like a cute cafe, so we decided to look up the
                 menu before we went. We had a hard time navigating the site, and while we eventually found
@@ -96,21 +101,21 @@
                     <div class="table-cell">
                         <ul>
                             <li>
-                                There were 3 different styles of pages containing different information and
-                                links (menu, contact, hours, etc.) making it hard to locate anything quickly.
+                                3 different styles of pages containing different information and
+                                links (menu, contact, hours, etc.) making it hard to locate anything quickly
                             </li>
                             <li>
-                                Each of the different styles of pages have different navbars containing
-                                different links to pages.
+                                each of the different styles of pages have different navbars containing
+                                different links to pages
                             </li>
                             <li>
-                                Some items on the menu don't have descriptions about what is in the dish,
-                                so new users may not know what to get.
+                                some items on the menu don't have descriptions about what is in the dish,
+                                so new users may not know what to get
                             </li>
                             <li>
-                                The home page has a link for "order for delivery" that takes users to their menu
-                                and allows them to place an online order. For users that just want to look at the
-                                menu items, it's not intuitive to click on this link.
+                                home page has a link for "order for delivery" that takes users to their menu
+                                and allows them to place an online order which is not intuitive if users just want to
+                                look at menu items
                             </li>
                         </ul>
                     </div>
@@ -121,18 +126,17 @@
                     <div class="table-cell">
                         <ul>
                             <li>
-                                The different styles of pages that contain different information makes it difficult
-                                to remember which links to click to get you to the desired destination.
+                                different styles of pages that contain different information makes it difficult
+                                to remember which links to click to get you to the desired destination
                             </li>
                             <li>
-                                The menu page does not contain a link back to the home page, so users would need to
-                                remember what pages to go through to return to the home page.
+                                menu page does not contain a link back to the home page, so users would need to
+                                remember what pages to go through to return to the home page
                             </li>
                             <li>
-                                The navbar of the menu page has an option for "order for delivery" and a dropdown
+                                navbar of the menu page has an option for "order for delivery" and a dropdown
                                 for "more" that includes "student snackpass", "order delivery", or "purchase a giftcard"
-                                rather than having all of these options easily visible, so users would need to remember
-                                these are options rather than having them readily available.
+                                rather than having all of these options easily visible
                             </li>
                         </ul>
                     </div>
@@ -143,24 +147,17 @@
                     <div class="table-cell">
                         <ul>
                             <li>
-                                The 3 different style pages makes it incredibly frustrating to navigate through the
-                                site
-                                quickly because clicking on one link may take you to a page missing the link that
-                                gets
-                                you to where you want to go.
+                                3 different style pages makes it incredibly frustrating to navigate through the
+                                site quickly
                             </li>
                             <li>
-                                Even having used the website before, I still had to try a few different times to get
-                                to the menu page.
+                                even having used the website before, I still had to try a few different times to get
+                                to the menu page
                             </li>
                             <li>
-                                The "order delivery" page just contains links to the DASAP and GrubHub. If users
-                                want to
-                                look
-                                at the menu and then decide whether they want to order for pickup or delivery, they
-                                have
-                                to
-                                navigate through a few pages.
+                                order delivery page just contains links to the DASAP and GrubHub forcing users to
+                                navigate
+                                through a few pages to first look at the the menu and then order
                             </li>
                         </ul>
                     </div>
@@ -171,25 +168,24 @@
                     <div class="table-cell">
                         <ul>
                             <li>
-                                All of the images in the slideshow of the home page are cut off, and the slideshow
-                                is automatic, so it doesn't allow you to go forwards or backwards in case you miss
-                                one of the images and want to see it.
+                                all images in the slideshow of the home page are cut off, and the slideshow
+                                does not allow for user scrolling
                             </li>
                             <li>
-                                There are spelling mistakes (e.g. on the navbar of one of the page styles,
-                                "delivery" is spelled "delivey").
+                                spelling mistakes (e.g. on the navbar of one of the page styles,
+                                "delivery" is spelled "delivey")
                             </li>
                             <li>
-                                The home page has inconsistent capitalization of the different navigation
-                                links.
+                                home page has inconsistent capitalization of the different navigation
+                                links
                             </li>
                             <li>
-                                The menu page contains duplicates of some food items.
+                                menu page contains duplicates of some food items
                             </li>
                             <li>
-                                In the home page, there are circles to separate different links, but looking at the
-                                page
-                                on a tablet or phone makes the separators look like bullet points.
+                                home page conains circles to separate different links, but resizing the screen makes
+                                them
+                                look like bullet points
                             </li>
                         </ul>
                     </div>
@@ -257,7 +253,7 @@
             <h3> Visual Design Style Guide </h3>
             <div class="figures">
                 <div class="single-figure">
-                    <img style="width:50%" src="../images/responsive_redesign/style_guide.png"
+                    <img id="style-guide" src="../images/responsive_redesign/style_guide.png"
                         alt="style guide for the high-fidelity prototype">
                     <p>
                         Visual Design Style Guide for Small Point Cafe
@@ -277,7 +273,7 @@
                 </div>
 
                 <div class="slides fade">
-                    <img src="../imagesresponsive_redesign/high_fidelity/web_about.png">
+                    <img src="../images/responsive_redesign/high_fidelity/web_about.png">
                     <div class="text">High-Fidelity Mockup for Webpage About</div>
                 </div>
 
@@ -454,7 +450,7 @@
             <div class="content">
                 <p>
                     The newly designed site can be found
-                    <a href="https://caffeinatedcapybara101.github.io/small_point">here</a>.
+                    <a href="https://caffeinatedcapybara101.github.io/small_point" target="_blank">here</a>.
                     The buttons on the left side navigation bar do work, so you can click on those and it
                     will take you to the respective pages. The only page that is not designed like the
                     prototypes is the MENU page simply because I did not have the capacity to create the page

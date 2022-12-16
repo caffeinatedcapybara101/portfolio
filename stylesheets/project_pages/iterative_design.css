@@ -21,7 +21,7 @@
 
 #sketches-slides .slides,
 #sketches-slides .arrows {
-    width: 40%;
+    width: 350px;
 }
 
 #low-fidelity-slides .slides,
@@ -32,7 +32,7 @@
 #updated-high-fidelity-slides .arrows,
 #user-testing-slides .slides,
 #user-testing-slides .arrows {
-    width: 20%;
+    width: 250px;
 }
 
 .dot {
@@ -42,4 +42,28 @@
 .active,
 .dot:hover {
     background-color: #879A5B;
+}
+
+li span {
+    background-color: #879A5B58;
+}
+
+/************************* links *************************/
+p a {
+    border-bottom: 3px solid #879A5B58;
+}
+
+p a:hover {
+    border-bottom-color: #879A5B;
+}
+
+/************************ handles changes resizing changes ************************/
+
+@media (max-width:572px) {
+
+    #header-bracket,
+    #header-bracket:before {
+        height: 175px;
+        margin-bottom: 50px;
+    }
 }

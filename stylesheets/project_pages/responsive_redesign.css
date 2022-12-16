@@ -35,6 +35,10 @@
     vertical-align: middle;
 }
 
+#style-guide {
+    width: 400px;
+}
+
 /************************* links *************************/
 p a {
     border-bottom: 3px solid #EEC17058;
@@ -56,20 +60,23 @@ p a:hover {
 
 /************************* slideshow *************************/
 
-#high-fidelity-tablet-slides .slides {
-    width: 50%;
+#low-fidelity-slides .slides,
+#low-fidelity-slides .arrows,
+#high-fidelity-web-slides .slides,
+#high-fidelity-web-slides .arrows,
+#annotations-slides .slides,
+#annotations-slides .arrows {
+    width: 750px;
 }
 
-#high-fidelity-phone-slides .slides {
-    width: 46%;
-}
-
+#high-fidelity-tablet-slides .slides,
 #high-fidelity-tablet-slides .arrows {
-    width: 50%;
+    width: 300px;
 }
 
+#high-fidelity-phone-slides .slides,
 #high-fidelity-phone-slides .arrows {
-    width: 46%;
+    width: 200px;
 }
 
 .dot {
@@ -79,4 +86,27 @@ p a:hover {
 .active,
 .dot:hover {
     background-color: #EEC170;
+}
+
+/************************ handles changes resizing changes ************************/
+
+@media (max-width:930px) {
+
+    #low-fidelity-slides .slides,
+    #low-fidelity-slides .arrows,
+    #high-fidelity-web-slides .slides,
+    #high-fidelity-web-slides .arrows,
+    #annotations-slides .slides,
+    #annotations-slides .arrows {
+        width: 100%;
+    }
+}
+
+@media (max-width:756px) {
+
+    #header-bracket,
+    #header-bracket:before {
+        height: 175px;
+        margin-bottom: 50px;
+    }
 }

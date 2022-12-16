@@ -13,60 +13,71 @@
     border-bottom: 3px solid #ff9797;
 }
 
-.single-figure {
-    border: 2px solid #ff9797;
-    display: inline;
-    margin: 5px;
-    padding: 7px;
-    width: 375px;
-    height: 760px;
-}
-
-.single-figure img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    vertical-align: middle;
-}
-
-.single-figure p {
-    width: 100%;
-    vertical-align: middle;
-}
-
-/* table for user observation */
-.user-obs {
+/************************* persona images *************************/
+#personas-content {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.user-obs table {
-    width: 575px;
-    margin: 5px;
-    padding: 5px;
-    border: 2px solid #ff9797;
+.single-persona {
+    width: 450px;
+    margin: 0px 20px 0px 20px;
 }
 
-.table-head {
-    text-align: center;
-    border-bottom: 2px solid #ff9797;
-    height: 25px;
+.single-persona .figures {
+    justify-content: left;
 }
 
-/* persona images */
 .persona-img {
+    width: 450px;
+    margin: 0px;
+}
+
+/************************* slideshows *************************/
+#interface-slides .slides,
+#interface-slides .arrows,
+#storyboard-slides .slides,
+#storyboard-slides .arrows {
     width: 500px;
 }
 
-/* storyboard images */
-.storyboard {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.dot {
+    background-color: #ff979758;
 }
 
-.storyboard img {
-    width: 350px;
-    margin: 7px;
+.active,
+.dot:hover {
+    background-color: #ff9797;
+}
+
+/************************* links *************************/
+p a {
+    border-bottom: 3px solid #ff979758;
+}
+
+p a:hover {
+    border-bottom-color: #ff9797;
+}
+
+/************************ handles changes resizing changes ************************/
+
+@media (max-width:680px) {
+
+    #interface-slides .slides,
+    #interface-slides .arrows,
+    #storyboard-slides .slides,
+    #storyboard-slides .arrows {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:934px) {
+
+    #header-bracket,
+    #header-bracket:before {
+        height: 175px;
+        margin-bottom: 50px;
+    }
 }

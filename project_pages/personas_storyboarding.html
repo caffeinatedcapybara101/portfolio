@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../stylesheets/navbar_style.css">
     <link rel="stylesheet" href="../stylesheets/project_pages/proj_page_style.css">
     <link rel="stylesheet" href="../stylesheets/project_pages/personas_storyboarding.css">
+    <link rel="stylesheet" href="../stylesheets/project_pages/slideshow_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
     <!-- header -->
     <header>
         <h2>
-            <a href="index.html">CAFFEINATED CAPYBARA</a>
+            <a href="../index.html">CAFFEINATED CAPYBARA</a>
         </h2>
         <!-- navbar links -->
         <nav>
@@ -41,8 +42,29 @@
             <h2> October 4, 2022 </h2>
         </div>
 
-        <!------------ Part 1: Preparation ------------>
+        <!------------ Summary ------------>
         <div class="bracket">
+            <h2>
+                SUMMARY
+            </h2>
+        </div>
+        <div class="content">
+            <p>
+                Personas and Storyboarding is a project designed to understand an interface, the Ten One
+                Tea House Snackpass Kiosk, through the user's persepective by creating personas and
+                a storyboard for one of the personas. This first part of this project,
+                <a href="#preparation">Preparation</a>, included choosing an interface and understanding
+                the process of using this interface. The second part of this project,
+                <a href="#observations">Observations</a>, included observing user interaction with the interface and
+                interviewing users. The third part of this project, <a href="#personas">Personas</a>, included
+                creating personas based on the data collected in the observations section. The final part of this
+                project, <a href="#storyboarding">Storyboarding</a> included choosing one of the personas and creating
+                a story for the user's journey interacting with the interface.
+            </p>
+        </div>
+
+        <!------------ Part 1: Preparation ------------>
+        <div id="preparation" class="bracket">
             <h2>
                 PART 1: PREPARATION
             </h2>
@@ -58,63 +80,54 @@
 
             <!-- Sketch -->
             <h3> Sketch and Description of Interface </h3>
-            <div class="figures">
-                <div class="single-figure">
-                    <img src="../images/personas_storyboarding/kiosk_home.jpeg" alt="kiosk home page">
-                    <p>
-                        The kiosk at Ten One allows for contactless ordering of drinks and helps with reducing the
-                        wait time for ordering. It consists of a screen that allows customers to choose their drinks
-                        and a stand with a card reader. When customers first arrive, the home screen contains a "Tap
-                        to Continue" caption that informs users to tap anywhere on the screen to continue with the
-                        ordering process.
-                    </p>
+
+            <div id="interface-slides" class="slideshow-container">
+                <!-- images -->
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/kiosk_home.jpg" alt="kiosk home page">
                 </div>
 
-                <div class="single-figure">
-                    <img src="../images/personas_storyboarding/kiosk_menu.jpg" alt="kiosk menu page">
-                    <p>
-                        Once customers tap the screen, they are met with a new interface that displays the menu.
-                        The menu contains information about the different categories of drinks, the names of each
-                        drink, the price of the drink, images of the drink, etc.
-                    </p>
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/kiosk_menu.jpg" alt="kiosk menu">
                 </div>
 
-                <div class="single-figure">
-                    <img src="../images/personas_storyboarding/kiosk_addons.jpg" alt="kiosk add ons page">
-                    <p>
-                        Once the customer taps on the drink they want to order, they are presented with options about
-                        how they want their drink and other add-ons. The options are spilt into categories (size, milk,
-                        milk foam, toppings, ice level, and sugar level). If the category is required, then it ensures
-                        that users select an options. Additionally, if certain options within a category cost extra
-                        money, the screen will disply exactly how much will be added to the total.
-                    </p>
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/kiosk_addons.jpg" alt="kiosk addons">
                 </div>
 
-                <div class="single-figure">
-                    <img src="../images/personas_storyboarding/kiosk_checkout.jpg" alt="kiosk checkout page">
-                    <p>
-                        After users have selected all their add-ons, they can either add more drinks or check out. On
-                        the checkout page, the users are able to see every item they have in their cart (along with
-                        any choices/add-ons they selected) and the total price of their order.
-                    </p>
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/kiosk_checkout.jpg" alt="kiosk checkout">
                 </div>
 
-                <div class="single-figure">
-                    <img src="../images/personas_storyboarding/kiosk_payment.jpg" alt="kios pay page">
-                    <p>
-                        Finally, when customers place the order, they are first presented with a screen that allows them
-                        to select a tip. Once they have selected the tip and continued, they are presented with a screen
-                        informing them how to make the payment. From here, they can use the card reader attached to the
-                        kiok in order to pay. This card reader allows for cards (insert or tap to pay) as well as Apple
-                        Pay. After the user pays, a screen appears that asks the user for a phone number and an option
-                        to select whether they want to collect their Snackpass rewards. Once the user enters the phone
-                        number and selects and option for rewards, another screen appears. The final screen displays the
-                        user's order number. Then, when the user picks up their order, there is a recipt attached to the
-                        drink, so they know exactly what they ordered and how much it cost.
-                    </p>
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/kiosk_payment.jpg" alt="kiosk payment">
+                </div>
+
+                <!-- next and previous buttons -->
+                <div class="arrows">
+                    <a class="prev" onclick="plusSlidesInterface(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlidesInterface(1)">&#10095;</a>
                 </div>
             </div>
 
+            <!-- dots/circles that show current slide -->
+            <div id="interface-dots" style="text-align:center">
+                <span class="dot" onclick="currentSlideInterface(1)"></span>
+                <span class="dot" onclick="currentSlideInterface(2)"></span>
+                <span class="dot" onclick="currentSlideInterface(3)"></span>
+                <span class="dot" onclick="currentSlideInterface(4)"></span>
+                <span class="dot" onclick="currentSlideInterface(5)"></span>
+            </div>
+        </div>
+
+        <!------------ Part 2: Observations ------------>
+        <div id="observations" class="bracket">
+            <h2>
+                PART 2: OBSERVATIONS
+            </h2>
+        </div>
+
+        <div class="content">
             <!-- Questions for Users -->
             <h3> Questions for Users </h3>
             <p>
@@ -126,151 +139,6 @@
                     the kios to order? </li>
                 <li> Was there any particular feature that stood out to you? </li>
             </ul>
-            </p>
-        </div>
-
-        <!------------ Part 2: Observations ------------>
-        <div class="bracket">
-            <h2>
-                PART 2: OBSERVATIONS
-            </h2>
-        </div>
-
-        <div class="content">
-            <!-- Observations -->
-            <h3> Objective Observations </h3>
-            <p>
-            <div class="user-obs">
-                <!-- User 1 -->
-                <table>
-                    <tr>
-                        <td class="table-head">User 1</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    Hesitated when first arriving at kiosk - looked at kiosk, turned to walked away,
-                                    but decided to proceed with kiosk
-                                </li>
-                                <li>
-                                    Tapped the home screen once, nothing happend (screen did not change), and tapped it
-                                    again
-                                </li>
-                                <li>
-                                    Scrolled all the way to the bottom of the menu and then back to the top again
-                                </li>
-                                <li>
-                                    Clicked on a few different drink categories at the top of the menu page
-                                </li>
-                                <li>
-                                    Scrolled through the add-ons/options page before selecting any of the options for
-                                    any of the categories
-                                </li>
-                                <li>
-                                    Warning saying they didn't select an option for a particular category appeared when
-                                    adding to cart for the first time
-                                </li>
-                                <li>
-                                    Took time to look through the checkout page
-                                </li>
-                                <li>
-                                    At the tips page, selected one option before deciding on a different option
-                                </li>
-                                <li>
-                                    Tapped card for payment method
-                                </li>
-                                <li>
-                                    Entered their phone number and opted out of the Snackpass reward after some
-                                    hesitation
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-
-                <!-- User 2 -->
-                <table>
-                    <tr>
-                        <td class="table-head">User 2</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    A pair of friends - the first friend was ordering but the second friend payed
-                                </li>
-                                <li>
-                                    Second friend walked up to kiosk first, and tapped the home screen
-                                </li>
-                                <li>
-                                    First friend looked through options (scrolled through a little bit of the menu)
-                                    but did not choose a drink
-                                </li>
-                                <li>
-                                    Second friend recommended a drink (Grapefruit Tea), and the first one chose that
-                                </li>
-                                <li>
-                                    First friend selected options in the add-ons/options page, but stopped at the
-                                    toppings section
-                                </li>
-                                <li>
-                                    Second friend recommended selecting aloe, and first friend selected aloe
-                                </li>
-                                <li>
-                                    Once second friend added to cart, frist friend immediately pressed continue on the
-                                    page displaying cart content and price
-                                </li>
-                                <li>
-                                    Second friend selected a tip and inserted their card to pay, entered their phone
-                                    number, and opted for the Snackpass rewards
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-
-                <!-- User 3 -->
-                <table>
-                    <tr>
-                        <td class="table-head">User 3</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    Walked up to kios, and tapped screen
-                                </li>
-                                <li>
-                                    Immediately selected category (Milk Tea) from the categories listed at the
-                                    top of the menu page
-                                </li>
-                                <li>
-                                    Immediately selected the regular milk tea and proceeded to the add-ons/options page
-                                </li>
-                                <li>
-                                    On the add-ons/options page, went through the add-ons quickly and selected more than
-                                    one topping
-                                </li>
-                                <li>
-                                    Did not take time to read the contents of the cart or the price - immediately
-                                    checked out
-                                </li>
-                                <li>
-                                    Hesitated when selecting a tip - initially chose one options, but switched to
-                                    another
-                                </li>
-                                <li>
-                                    Used phone/Apple Pay to complete the transaction
-                                </li>
-                                <li>
-                                    Typed in phone number and opted for Snackpass reward with no hesitation
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
             </p>
 
             <!-- Key Observations -->
@@ -288,28 +156,6 @@
 
             <!-- Interview Summary -->
             <h3> Interview Summary </h3>
-            <p>
-                Just as a reminder, here are the questions I asked when interviewing the users about their
-                experience with the kiosk:
-            <ol type="1">
-                <li>
-                    Why did you choose to place your order through the kiosk?
-                </li>
-                <li>
-                    What would keep you from using this kiosk?
-                </li>
-                <li>
-                    What was easy about placing your order using the kiosk? What was difficult?
-                </li>
-                <li>
-                    Is there anything you would add, remove, or change to improve your experience with using
-                    the kios to order?
-                </li>
-                <li>
-                    Was there any particular feature that stood out to you? Why?
-                </li>
-            </ol>
-            </p>
             <p>
                 Here are the main points and takeaways from the interviews:
             <ul>
@@ -343,47 +189,57 @@
         </div>
 
         <!------------ Part 3: Personas ------------>
-        <div class="bracket">
+        <div id="personas" class="bracket">
             <h2>
                 PART 3: PERSONAS
             </h2>
         </div>
 
         <div class="content">
-            <!-- Persona 1 -->
-            <h3> Persona 1 </h3>
-            <p>
-                Crunched Carson is a student who is having a bad day and is in a time crunch because he is
-                already late to his section meeting. Unlike the Snackpass app, the kiosk has you input your
-                drink add-ons and preferences everytime you use it to order. While ordering his drink, Carson's
-                friend calls him telling him he'll be late if he doesn't leave Ten One now. Frustrated and rushed,
-                he does not notice that he accidentally selected the wrong topping. Additionally, he scrolls past a
-                required selection which slows him down even more since he has to go back and select an option in this
-                category.
-            </p>
-            <div class="figures">
-                <img class="persona-img" src="../images/personas_storyboarding/persona1.jpg" alt="persona 1">
-            </div>
+            <div id="personas-content">
+                <div class="single-persona">
+                    <!-- Persona 1 -->
+                    <h3> Persona 1 </h3>
+                    <p>
+                        Crunched Carson is a student who is having a bad day and is in a time crunch because he is
+                        already late to his section meeting. Unlike the Snackpass app, the kiosk has you input your
+                        drink add-ons and preferences everytime you use it to order. While ordering his drink, Carson's
+                        friend calls him telling him he'll be late if he doesn't leave Ten One now. Frustrated and
+                        rushed,
+                        he does not notice that he accidentally selected the wrong topping. Additionally, he scrolls
+                        past a
+                        required selection which slows him down even more since he has to go back and select an option
+                        in
+                        this
+                        category.
+                    </p>
+                    <div class="figures">
+                        <img class="persona-img" src="../images/personas_storyboarding/persona1.jpg" alt="persona 1">
+                    </div>
+                </div>
 
-            <!-- Persona 2 -->
-            <h3> Persona 2 </h3>
-            <p>
-                Confused Carly is a freshman who has never been to Ten One before and doesn't notice that the
-                kiosk does not accept cash. When she first enters the shop, she notices the kiosk and decides to order
-                from there because she hates having to order in person. After she spends some time scrolling through
-                the menu, she decides on the drink she wants and order. At this point, Carly
-                realizes that the machine does not accept cash and starts to get worried. However, she realizes that the
-                machine might accept Apple Pay since most modern machines do. Luckily, it does and she pays using her
-                phone. Since Carly is a freshman, she has never heard of Snackpass, but now that the knows Snackpass
-                gives rewards, she decides to download the app and tell her friends about it.
-            </p>
-            <div class="figures">
-                <img class="persona-img" src="../images/personas_storyboarding/persona2.jpg" alt="persona 1">
+                <div class="single-persona">
+                    <!-- Persona 2 -->
+                    <h3> Persona 2 </h3>
+                    <p>
+                        Confused Carly is a freshman who has never been to Ten One before and doesn't notice that the
+                        kiosk does not accept cash. When she first enters the shop, she decides to order at the kiosk
+                        because she hates having to order in person. After she picks a drink to order, she
+                        realizes that the machine does not accept cash and starts to get worried. She then realizes that
+                        the machine might accept Apple Pay. Luckily, it does and she pays using her
+                        phone. Since Carly is a freshman, she has never heard of Snackpass, but she decides to download
+                        the app
+                        and tell her friends about it.
+                    </p>
+                    <div class="figures">
+                        <img class="persona-img" src="../images/personas_storyboarding/persona2.jpg" alt="persona 1">
+                    </div>
+                </div>
             </div>
         </div>
 
         <!------------ Part 4: Story Boards ------------>
-        <div class="bracket">
+        <div id="storyboarding" class="bracket">
             <h2>
                 PART 4: STORY BOARD
             </h2>
@@ -393,17 +249,66 @@
             <p>
                 This is a story board for Carson's user experience with the Ten One Snackpass Kiosk.
             </p>
-            <div class="storyboard">
-                <img src="../images/personas_storyboarding/storyboard1.jpg" alt="storyboard 1">
-                <img src="../images/personas_storyboarding/storyboard2.jpg" alt="storyboard 2">
-                <img src="../images/personas_storyboarding/storyboard3.JPG" alt="storyboard 3">
-                <img src="../images/personas_storyboarding/storyboard4.jpg" alt="storyboard 4">
-                <img src="../images/personas_storyboarding/storyboard5.jpg" alt="storyboard 5">
-                <img src="../images/personas_storyboarding/storyboard6.jpg" alt="storyboard 6">
-                <img src="../images/personas_storyboarding/storyboard7.jpg" alt="storyboard 7">
-                <img src="../images/personas_storyboarding/storyboard8.jpg" alt="storyboard 8">
-                <img src="../images/personas_storyboarding/storyboard9.jpg" alt="storyboard 9">
+
+            <div id="storyboard-slides" class="slideshow-container">
+                <!-- images -->
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard1.jpg" alt="storyboard 1">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard2.jpg" alt="storyboard 2">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard3.JPG" alt="storyboard 3">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard4.JPG" alt="storyboard 4">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard5.JPG" alt="storyboard 5">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard6.JPG" alt="storyboard 6">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard7.JPG" alt="storyboard 7">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard8.JPG" alt="storyboard 8">
+                </div>
+
+                <div class="slides fade">
+                    <img src="../images/personas_storyboarding/storyboard9.JPG" alt="storyboard 9">
+                </div>
+
+                <!-- next and previous buttons -->
+                <div class="arrows">
+                    <a class="prev" onclick="plusSlidesStoryboard(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlidesStoryboard(1)">&#10095;</a>
+                </div>
+            </div>
+
+            <!-- dots/circles that show current slide -->
+            <div id="storyboard-dots" style="text-align:center">
+                <span class="dot" onclick="currentSlideStoryboard(1)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(2)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(3)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(4)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(5)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(6)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(7)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(8)"></span>
+                <span class="dot" onclick="currentSlideStoryboard(9)"></span>
             </div>
         </div>
     </div>
+
+    <script src="../javascript/personas-storyboarding-slideshow.js"></script>
 </body>

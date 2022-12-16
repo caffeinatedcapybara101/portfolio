@@ -1,0 +1,42 @@
+#header-bracket:before {
+    border: 0px solid #B989C6;
+    border-top: 3px solid #B989C6;
+    border-left: 3px solid #B989C6;
+    border-bottom: 3px solid #B989C6;
+}
+
+.bracket {
+    border: 3px solid #B989C6;
+}
+
+.content h3 {
+    border-bottom: 3px solid #B989C6;
+}
+
+.component {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.component p {
+    width: 60%;
+    margin: 15px;
+}
+
+p span {
+    background-color: #B989C658;
+}
+
+/************************* links *************************/
+p a {
+    border-bottom: 3px solid #B989C658;
+}
+
+p a:hover {
+    border-bottom: 3px solid #B989C6;
+}
+
+li span {
+    background-color: #B989C658;
+}

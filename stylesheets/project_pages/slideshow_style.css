@@ -19,7 +19,6 @@ slideshow source:
     /* hides slides by default */
     display: none;
     text-align: center;
-    width: 55%;
 }
 
 .slides img {
@@ -30,7 +29,6 @@ slideshow source:
 .arrows {
     margin-top: auto;
     margin-bottom: auto;
-    width: 55%;
     display: flex;
     justify-content: space-between;
     position: absolute;

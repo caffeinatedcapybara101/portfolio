@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Caffeinated Capybara</title>
+    <link rel="shortcut icon" type="images/png" href="images/browser_icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <link rel="stylesheet" href="../stylesheets/navbar_style.css">
+    <link rel="stylesheet" href="../stylesheets/project_pages/proj_page_style.css">
+    <link rel="stylesheet" href="../stylesheets/project_pages/development.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h2>
+            <a href="../index.html">CAFFEINATED CAPYBARA</a>
+        </h2>
+        <!-- navbar links -->
+        <nav>
+            <ul class="navbar-link">
+                <li>
+                    <a class="nav-individual-link" href="../index.html">ABOUT</a>
+                </li>
+                <li>
+                    <a class="nav-individual-link" href="../projects.html">PROJECTS</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!------------ Heading ------------>
+        <div id="header-bracket">
+            <h1> Development </h1>
+            <h2> November 29, 2022 </h2>
+        </div>
+
+        <!------------ Summary ------------>
+        <div class="bracket" id="goal-value">
+            <h2>
+                Summary
+            </h2>
+        </div>
+
+        <div class="content">
+            <p>
+                Development is a project creating an interactive interface, a Squishmallows site, that includes
+                a sorting feature, filtering feautres, a reset feature, and a cart feature. The first part of
+                the project,
+                <a href="#goal-value">The Goal and Value</a>,
+                involved identifying the overarching goal of the site and the different features necessary to
+                achieve the goal. The second part of the project,
+                <a href="usability">Usability Principles Considered</a>,
+                involved identifying the important usability principles necessary to achieve the goal of the site,
+                and how exactly to incorporate these principles. The final part of the project involved using React
+                to create the site and providing and overarching view of how each feature was implemented.
+            </p>
+        </div>
+
+        <!------------ Part 1: The Goal and Value of the Application ------------>
+        <div class="bracket" id="goal-value">
+            <h2>
+                PART 1: THE GOAL AND VALUE OF THE APPLICATION
+            </h2>
+        </div>
+
+        <div class="content">
+            <p>
+                The goal of this site is to aggreate a portion of all squishmallows so that people can view their
+                different
+                collectors details and the average prices of each of the different sizes. For anyone interested in
+                purchasing a squishmallow or multiple from certain categories or of certain sizes, they can easily find
+                those here.
+            </p>
+        </div>
+
+        <!------------ Part 2: Usability Principles Considered ------------>
+        <div class="bracket" id="usability-problems">
+            <h2>
+                PART 2: USABILITY PRINCIPLES CONSIDERED
+            </h2>
+        </div>
+
+        <div class="content">
+            <ul>
+                <li>
+                    <span>Visibility of System Status</span>: Users can see which the exact properties they are
+                    filtering/sorting by and how these selections affect the squishmallows displayed. The can clearly
+                    see/select the price that corresponds to a particular side, the items in their cart, and the toal
+                    price.
+                </li>
+                <li>
+                    <span>User Control and Freedom</span>: Users have the ability to clearly remove items from their
+                    cart if they accidentally add the wrong size or the wrong squishmallow.
+                </li>
+                <li>
+                    <span>Recognition Rather than Recall</span>: The sorting and filter menu stays fixed in the page.
+                    When the users are scrolling, they don't have to remember which filter or sort property they have
+                    selected and they can easily change their selection.
+                </li>
+                <li>
+                    <span>Flexibility and Efficiency of Use</span>: The page is not cluttered with text. The
+                    squishmallow cards have only the essential information (name, category, sizes, ect.).
+                    The sorting and filtering menu divides the different categories up based on their headers.
+                </li>
+            </ul>
+        </div>
+
+        <!------------ Part 3: Architecture ------------>
+        <div class="bracket" id="architecture">
+            <h2>
+                PART 3: ARCHITECTURE
+            </h2>
+        </div>
+
+        <div class="content">
+            <p>
+                The link to the deployed site can be found
+                <a href="https://caffeinatedcapybara101.github.io/development/" target="_blank">here</a>.
+            </p>
+
+            <h3>The Item Cards</h3>
+            <div class="component">
+                <img style="width: 400px" src="../images/development/squishmallow-card.png">
+
+                <p>
+                    Each squishmallow card is a compnent. The component contains the information (name, category, year,
+                    sizes, price) for the particular squishmallow and an cart button that allows you to add the
+                    squishmallow (of the selected size and price) to the cart.
+                    <br>
+                    <br>
+                    All squishmallows are stored in a list which is primarily responsible for maintaining
+                    the current price for the squishmallow depending on which size is selected. The filtering and
+                    sorting takes objects from this list to create the new filtered/sorted list. This list is then used
+                    to display the Squishmallow component on the screen.
+                </p>
+            </div>
+
+
+            <h3>Filtering and Sorting Categories</h3>
+            <div class="component">
+                <img style="width: 200px" src="../images/development/sort_filter.png">
+
+                <p>
+                    In terms of <span>filtering</span>, the user can filter based on category of squishmallow or based
+                    on the available sizes. Each squishmallow on this page lies in one category only but can
+                    come in a variety of sizes. When the user clicks on a filter button in the 'Category' section, the
+                    categoryFilters state variable gets updated by adding the current filter parameter to the list. When
+                    the user clicks on the filter buttons in the 'Size' section, the sizeFilters state variable gets
+                    updated by adding the current filter parameter to the list.
+                    <br>
+                    <br>
+                    In terms of <span>sorting</span>, the user can sort based on the name of the squishmallow
+                    (this sorts in alphabetical order) or the year of the squishmallow (this sorts in
+                    ascending order). When the user clicks on any of the sort buttons, the sortBy state variable gets
+                    updated with the current sort parameter.
+                    <br>
+                    <br>
+                    When these state changes occur, the variable containing the selected squishmallows also changes
+                    based on the filters/sorting parameters and the page gets updated to show the selected
+                    squishmallows.
+                </p>
+            </div>
+
+            <h3>The Aggregator</h3>
+            <div class="component">
+                <img style="width:400px" src="../images/development/aggregator.png">
+
+                <p>
+                    For the <span>aggregator</span> component of the site, I chose to implement a cart. The cart
+                    keeps track of squishmallows, their size, the quantitiy, the price based on the item and quanitity,
+                    and the total price of the cart.
+                    <br>
+                    <br>
+                    When the user click the the cart button, the cartItems state variable gets updated with the current
+                    squishmallow, the size, the price, and the quantity.
+                    <br>
+                    <br>
+                    When the user clicks on the '-', '+', and 'Trash' buttons within each item in the cart,
+                    the cartItems state variable gets updated with the current quantity or current items
+                    in the cart.
+                    <br>
+                    <br>
+                    When these state changes occur, the page and the cart get updated to show the squishmallow added to
+                    the cart.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
